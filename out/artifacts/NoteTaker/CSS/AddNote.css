@@ -1,0 +1,16 @@
+h1{
+
+    font-family: "Cascadia Code SemiBold", serif ;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: #3722f6;
+}
+textarea{
+    height: 600px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+}
