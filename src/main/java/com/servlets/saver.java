@@ -1,21 +1,22 @@
 package com.servlets;
 
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 import com.entities.note;
 import com.helper.SessionManager;
-import jakarta.servlet.annotation.WebServlet;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 
 import org.hibernate.Transaction;
 
 import java.io.PrintWriter;
 import java.util.Date;
-@WebServlet("/saver")
-public class SaveNoteServlet extends HttpServlet {
-    public SaveNoteServlet() {
+
+public class saver extends HttpServlet {
+    public saver() {
         super();
     }
 
@@ -37,7 +38,7 @@ public class SaveNoteServlet extends HttpServlet {
 
             resp.setContentType("text/html");
             PrintWriter out = resp.getWriter();
-            out.println("<h1>Hi saved note</h1>");
+            out.println("<h1>Hi saved note <a href='showNotes.jsp'>Click to view</a></h1>");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
